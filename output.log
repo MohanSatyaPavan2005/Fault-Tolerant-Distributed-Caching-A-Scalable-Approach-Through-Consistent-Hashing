@@ -1,0 +1,941 @@
+2025/05/11 06:24:04 Starting metrics collection
+2025/05/11 06:24:04 Set server info: type=master
+2025/05/11 06:24:04 =========================================
+2025/05/11 06:24:04 Starting server with Prometheus metrics
+2025/05/11 06:24:04 =========================================
+2025/05/11 06:24:04 Metrics handler registered at /metrics
+2025/05/11 06:24:04 Server configured with dedicated /metrics endpoint for Prometheus metrics
+2025/05/11 06:24:04 Routes registered:
+2025/05/11 06:24:04   - /metrics (Prometheus metrics)
+2025/05/11 06:24:04   - / (Root endpoint)
+2025/05/11 06:24:04   - /cache/ (Cache operations)
+2025/05/11 06:24:04   - /health (Health check)
+2025/05/11 06:24:04   - /test-metrics (Test endpoint)
+2025/05/11 06:24:04 Using port 8001 from environment
+Master server starting on port 8001...
+2025/05/11 06:24:04 Listening on :8001
+2025/05/11 06:24:05 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:24:05 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:24:15 MAIN ROUTER: Routing /cache/ to application handler
+2025/05/11 06:24:15 Recorded cache operation: put, status: success
+2025/05/11 06:24:15 Updated cache size metric: 1 items
+2025/05/11 06:24:15 Request to cache (PUT) completed in 0.00s with status 200
+2025/05/11 06:24:15 MAIN ROUTER: Routing /cache/ to application handler
+2025/05/11 06:24:15 Recorded cache operation: get, status: hit
+2025/05/11 06:24:15 Request to cache (GET) completed in 0.00s with status 200
+2025/05/11 06:24:15 MAIN ROUTER: Routing /cache/ to application handler
+2025/05/11 06:24:15 Recorded cache operation: get, status: miss
+2025/05/11 06:24:15 Request to cache (GET) completed in 0.00s with status 404
+2025/05/11 06:24:17 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:24:17 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:26:02 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:26:02 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:26:02 MAIN ROUTER: Routing /cache/ to application handler
+2025/05/11 06:26:02 Recorded cache operation: put, status: success
+2025/05/11 06:26:02 Updated cache size metric: 2 items
+2025/05/11 06:26:02 Request to cache (PUT) completed in 0.00s with status 200
+2025/05/11 06:26:02 MAIN ROUTER: Routing /cache/ to application handler
+2025/05/11 06:26:02 Recorded cache operation: get, status: hit
+2025/05/11 06:26:02 Request to cache (GET) completed in 0.00s with status 200
+2025/05/11 06:26:04 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:26:04 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:28:37 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:28:37 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:28:37 MAIN ROUTER: Routing /cache/ to application handler
+2025/05/11 06:28:37 Recorded cache operation: put, status: success
+2025/05/11 06:28:37 Updated cache size metric: 3 items
+2025/05/11 06:28:37 Request to cache (PUT) completed in 0.00s with status 200
+2025/05/11 06:28:37 MAIN ROUTER: Routing /cache/ to application handler
+2025/05/11 06:28:37 Recorded cache operation: get, status: hit
+2025/05/11 06:28:37 Request to cache (GET) completed in 0.00s with status 200
+2025/05/11 06:28:38 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:28:38 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:32:02 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:32:02 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:33:13 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:33:13 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:33:13 MAIN ROUTER: Routing /cache/ to application handler
+2025/05/11 06:33:13 Recorded cache operation: put, status: success
+2025/05/11 06:33:13 Updated cache size metric: 4 items
+2025/05/11 06:33:13 Request to cache (PUT) completed in 0.00s with status 200
+2025/05/11 06:33:13 MAIN ROUTER: Routing /cache/ to application handler
+2025/05/11 06:33:13 Recorded cache operation: get, status: hit
+2025/05/11 06:33:13 Request to cache (GET) completed in 0.00s with status 200
+2025/05/11 06:33:13 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:33:13 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:34:47 MAIN ROUTER: Routing /cache/ to application handler
+2025/05/11 06:34:47 Recorded cache operation: put, status: success
+2025/05/11 06:34:47 Updated cache size metric: 5 items
+2025/05/11 06:34:47 Request to cache (PUT) completed in 0.00s with status 200
+2025/05/11 06:34:47 MAIN ROUTER: Routing /cache/ to application handler
+2025/05/11 06:34:47 Recorded cache operation: get, status: hit
+2025/05/11 06:34:47 Request to cache (GET) completed in 0.00s with status 200
+2025/05/11 06:34:47 MAIN ROUTER: Routing /cache/ to application handler
+2025/05/11 06:34:47 Recorded cache operation: get, status: miss
+2025/05/11 06:34:47 Request to cache (GET) completed in 0.00s with status 404
+2025/05/11 06:34:47 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:34:47 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:35:48 MAIN ROUTER: Routing /cache/ to application handler
+2025/05/11 06:35:48 Recorded cache operation: put, status: success
+2025/05/11 06:35:48 Updated cache size metric: 6 items
+2025/05/11 06:35:48 Request to cache (PUT) completed in 0.00s with status 200
+2025/05/11 06:35:48 MAIN ROUTER: Routing /cache/ to application handler
+2025/05/11 06:35:48 Recorded cache operation: get, status: hit
+2025/05/11 06:35:48 Request to cache (GET) completed in 0.00s with status 200
+2025/05/11 06:36:08 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:36:08 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:36:46 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:36:46 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:36:49 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:36:49 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:36:54 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:36:54 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:36:59 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:36:59 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:37:04 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:37:04 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:37:09 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:37:09 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:37:14 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:37:14 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:37:19 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:37:19 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:37:24 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:37:24 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:37:29 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:37:29 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:37:34 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:37:34 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:37:39 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:37:39 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:37:44 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:37:44 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:37:49 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:37:49 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:37:54 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:37:54 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:37:59 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:37:59 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:38:04 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:38:04 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:38:09 MAIN ROUTER: Routing /cache/ to application handler
+2025/05/11 06:38:09 Recorded cache operation: put, status: success
+2025/05/11 06:38:09 Updated cache size metric: 7 items
+2025/05/11 06:38:09 Request to cache (PUT) completed in 0.00s with status 200
+2025/05/11 06:38:09 MAIN ROUTER: Routing /cache/ to application handler
+2025/05/11 06:38:09 Recorded cache operation: get, status: hit
+2025/05/11 06:38:09 Request to cache (GET) completed in 0.00s with status 200
+2025/05/11 06:38:10 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:38:10 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:38:15 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:38:15 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:38:20 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:38:20 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:38:25 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:38:25 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:38:30 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:38:30 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:38:35 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:38:35 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:38:40 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:38:40 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:38:45 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:38:45 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:38:50 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:38:50 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:38:55 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:38:55 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:39:00 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:39:00 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:39:05 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:39:05 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:39:10 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:39:10 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:39:15 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:39:15 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:39:20 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:39:20 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:39:25 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:39:25 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:39:30 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:39:30 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:39:35 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:39:35 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:39:40 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:39:40 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:39:45 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:39:45 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:39:50 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:39:50 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:39:55 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:39:55 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:40:00 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:40:00 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:40:05 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:40:05 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:40:10 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:40:10 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:40:15 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:40:15 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:40:20 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:40:20 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:40:25 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:40:25 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:40:30 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:40:30 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:40:35 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:40:35 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:40:40 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:40:40 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:40:45 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:40:45 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:40:50 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:40:50 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:40:55 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:40:55 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:41:00 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:41:00 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:41:05 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:41:05 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:41:10 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:41:10 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:41:15 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:41:15 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:41:20 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:41:20 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:41:25 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:41:25 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:41:30 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:41:30 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:41:35 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:41:35 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:41:40 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:41:40 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:41:45 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:41:45 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:41:50 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:41:50 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:41:55 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:41:55 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:42:00 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:42:00 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:42:05 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:42:05 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:42:10 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:42:10 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:42:15 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:42:15 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:42:20 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:42:20 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:42:25 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:42:25 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:42:30 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:42:30 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:42:35 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:42:35 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:42:40 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:42:40 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:42:45 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:42:45 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:42:50 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:42:50 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:42:55 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:42:55 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:43:00 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:43:00 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:43:05 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:43:05 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:43:10 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:43:10 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:43:15 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:43:15 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:43:20 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:43:20 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:43:25 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:43:25 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:43:30 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:43:30 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:43:35 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:43:35 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:43:40 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:43:40 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:43:45 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:43:45 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:43:50 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:43:50 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:43:55 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:43:55 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:44:00 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:44:00 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:44:05 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:44:05 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:44:10 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:44:10 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:44:15 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:44:15 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:44:20 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:44:20 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:44:25 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:44:25 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:44:30 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:44:30 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:44:35 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:44:35 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:44:40 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:44:40 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:44:45 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:44:45 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:44:50 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:44:50 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:44:55 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:44:55 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:45:00 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:45:00 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:45:05 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:45:05 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:45:10 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:45:10 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:45:15 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:45:15 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:45:20 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:45:20 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:45:25 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:45:25 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:45:30 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:45:30 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:45:35 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:45:35 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:54:00 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:54:00 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:54:05 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:54:05 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:54:10 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:54:10 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:54:15 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:54:15 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:54:20 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:54:20 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:54:25 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:54:25 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:54:30 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:54:30 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:54:35 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:54:35 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:54:40 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:54:40 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:54:45 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:54:45 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:54:50 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:54:50 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:54:55 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:54:55 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:55:00 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:55:00 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:55:05 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:55:05 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:55:10 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:55:10 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:55:15 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:55:15 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:55:20 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:55:20 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:55:25 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:55:25 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:55:30 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:55:30 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:55:40 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:55:40 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:55:45 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:55:45 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:55:50 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:55:50 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:55:55 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:55:55 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:56:00 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:56:00 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:56:05 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:56:05 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:56:10 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:56:10 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:56:15 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:56:15 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:56:20 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:56:20 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:56:25 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:56:25 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:56:30 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:56:30 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:56:35 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:56:35 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:56:40 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:56:40 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:56:45 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:56:45 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:56:50 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:56:50 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:56:55 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:56:55 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:57:00 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:57:00 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:57:05 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:57:05 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:57:10 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:57:10 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:57:15 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:57:15 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:57:20 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:57:20 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:57:25 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:57:25 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:57:30 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:57:30 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:57:35 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:57:35 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:57:40 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:57:40 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:57:45 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:57:45 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:57:50 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:57:50 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:57:55 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:57:55 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:58:00 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:58:00 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:58:05 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:58:05 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:58:10 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:58:10 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:58:15 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:58:15 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:58:20 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:58:20 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:58:25 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:58:25 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:58:30 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:58:30 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:58:35 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:58:35 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:58:40 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:58:40 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:58:45 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:58:45 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:58:50 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:58:50 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:58:55 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:58:55 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:59:00 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:59:00 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:59:05 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:59:05 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:59:10 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:59:10 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:59:15 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:59:15 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:59:20 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:59:20 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:59:25 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:59:25 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:59:30 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:59:30 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:59:35 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:59:35 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:59:40 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:59:40 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:59:45 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:59:45 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:59:50 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:59:50 METRICS ROUTER: Received request for /metrics
+2025/05/11 06:59:55 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 06:59:55 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:00:00 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:00:00 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:00:05 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:00:05 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:00:10 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:00:10 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:00:15 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:00:15 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:00:20 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:00:20 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:00:25 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:00:25 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:00:30 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:00:30 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:00:35 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:00:35 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:00:40 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:00:40 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:00:45 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:00:45 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:00:50 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:00:50 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:00:55 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:00:55 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:01:00 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:01:00 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:01:05 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:01:05 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:01:10 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:01:10 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:01:15 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:01:15 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:01:20 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:01:20 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:01:25 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:01:25 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:01:30 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:01:30 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:01:35 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:01:35 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:01:40 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:01:40 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:01:45 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:01:45 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:01:50 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:01:50 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:01:55 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:01:55 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:02:00 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:02:00 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:02:05 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:02:05 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:02:10 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:02:10 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:02:15 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:02:15 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:02:20 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:02:20 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:02:25 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:02:25 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:02:30 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:02:30 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:02:35 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:02:35 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:02:40 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:02:40 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:02:45 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:02:45 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:02:50 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:02:50 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:02:55 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:02:55 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:03:00 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:03:00 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:03:05 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:03:05 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:03:10 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:03:10 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:03:15 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:03:15 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:03:20 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:03:20 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:03:25 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:03:25 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:03:30 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:03:30 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:03:35 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:03:35 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:03:40 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:03:40 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:03:45 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:03:45 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:03:50 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:03:50 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:03:55 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:03:55 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:04:00 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:04:00 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:04:05 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:04:05 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:04:10 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:04:10 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:04:15 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:04:15 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:04:20 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:04:20 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:04:25 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:04:25 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:04:30 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:04:30 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:04:35 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:04:35 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:04:40 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:04:40 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:04:45 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:04:45 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:04:50 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:04:50 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:04:55 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:04:55 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:05:00 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:05:00 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:05:05 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:05:05 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:05:10 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:05:10 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:05:15 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:05:15 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:05:20 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:05:20 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:05:25 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:05:25 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:05:30 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:05:30 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:05:35 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:05:35 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:05:40 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:05:40 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:05:45 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:05:45 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:05:50 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:05:50 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:05:55 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:05:55 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:06:00 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:06:00 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:06:05 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:06:05 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:06:10 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:06:10 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:06:15 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:06:15 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:06:20 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:06:20 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:06:25 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:06:25 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:06:30 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:06:30 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:06:35 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:06:35 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:06:40 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:06:40 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:06:45 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:06:45 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:06:50 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:06:50 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:06:55 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:06:55 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:07:00 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:07:00 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:07:05 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:07:05 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:07:10 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:07:10 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:07:15 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:07:15 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:07:20 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:07:20 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:07:25 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:07:25 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:07:30 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:07:30 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:07:35 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:07:35 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:07:40 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:07:40 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:07:45 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:07:45 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:07:50 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:07:50 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:07:55 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:07:55 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:08:00 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:08:00 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:08:05 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:08:05 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:08:10 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:08:10 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:09:45 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:09:45 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:09:50 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:09:50 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:09:55 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:09:55 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:10:00 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:10:00 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:10:05 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:10:05 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:10:10 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:10:10 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:10:15 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:10:15 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:10:20 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:10:20 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:10:25 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:10:25 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:10:30 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:10:30 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:10:35 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:10:35 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:10:40 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:10:40 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:10:45 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:10:45 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:10:50 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:10:50 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:10:55 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:10:55 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:11:00 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:11:00 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:11:05 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:11:05 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:11:10 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:11:10 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:11:15 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:11:15 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:11:20 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:11:20 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:11:25 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:11:25 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:11:30 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:11:30 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:11:35 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:11:35 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:11:40 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:11:40 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:11:45 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:11:45 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:11:50 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:11:50 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:11:55 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:11:55 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:12:00 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:12:00 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:12:05 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:12:05 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:12:10 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:12:10 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:12:15 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:12:15 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:12:20 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:12:20 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:12:25 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:12:25 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:12:30 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:12:30 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:12:35 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:12:35 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:12:40 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:12:40 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:12:45 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:12:45 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:12:50 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:12:50 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:12:55 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:12:55 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:13:00 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:13:00 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:13:05 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:13:05 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:13:10 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:13:10 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:13:15 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:13:15 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:13:20 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:13:20 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:13:25 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:13:25 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:13:30 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:13:30 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:13:35 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:13:35 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:13:40 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:13:40 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:13:45 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:13:45 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:13:50 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:13:50 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:13:55 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:13:55 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:14:00 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:14:00 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:14:05 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:14:05 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:14:10 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:14:10 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:14:15 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:14:15 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:14:20 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:14:20 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:14:25 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:14:25 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:14:30 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:14:30 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:14:35 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:14:35 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:14:40 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:14:40 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:14:45 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:14:45 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:14:50 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:14:50 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:14:55 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:14:55 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:15:00 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:15:00 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:15:05 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:15:05 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:15:10 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:15:10 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:15:15 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:15:15 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:15:20 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:15:20 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:15:25 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:15:25 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:15:30 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:15:30 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:15:35 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:15:35 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:15:40 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:15:40 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:15:45 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:15:45 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:15:50 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:15:50 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:15:55 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:15:55 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:16:00 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:16:00 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:16:05 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:16:05 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:16:10 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:16:10 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:16:15 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:16:15 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:16:20 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:16:20 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:16:25 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:16:25 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:16:30 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:16:30 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:16:35 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:16:35 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:16:40 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:16:40 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:16:45 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:16:45 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:16:50 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:16:50 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:16:55 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:16:55 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:17:00 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:17:00 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:17:05 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:17:05 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:17:10 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:17:10 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:17:15 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:17:15 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:17:20 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:17:20 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:17:25 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:17:25 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:17:30 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:17:30 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:17:35 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:17:35 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:17:40 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:17:40 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:17:45 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:17:45 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:17:50 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:17:50 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:17:55 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:17:55 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:18:00 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:18:00 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:18:05 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:18:05 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:18:10 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:18:10 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:18:15 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:18:15 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:18:20 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:18:20 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:18:25 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:18:25 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:18:30 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:18:30 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:18:35 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:18:35 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:18:40 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:18:40 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:18:45 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:18:45 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:18:50 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:18:50 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:18:55 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:18:55 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:19:00 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:19:00 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:19:05 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:19:05 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:19:10 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:19:10 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:19:15 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:19:15 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:19:20 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:19:20 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:19:25 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:19:25 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:19:30 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:19:30 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:19:35 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:19:35 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:19:40 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:19:40 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:19:45 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:19:45 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:19:50 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:19:50 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:19:55 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:19:55 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:20:00 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:20:00 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:20:05 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:20:05 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:20:10 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:20:10 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:20:15 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:20:15 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:20:20 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:20:20 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:20:25 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:20:25 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:20:30 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:20:30 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:20:35 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:20:35 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:20:40 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:20:40 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:20:45 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:20:45 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:20:50 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:20:50 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:20:55 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:20:55 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:21:00 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:21:00 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:21:05 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:21:05 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:21:10 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:21:10 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:21:15 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:21:15 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:21:20 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:21:20 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:21:25 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:21:25 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:21:30 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:21:30 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:21:35 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:21:35 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:21:40 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:21:40 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:21:45 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:21:45 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:21:50 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:21:50 METRICS ROUTER: Received request for /metrics
+2025/05/11 07:21:55 MAIN ROUTER: Routing /metrics to metrics handler
+2025/05/11 07:21:55 METRICS ROUTER: Received request for /metrics

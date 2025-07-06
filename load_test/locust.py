@@ -1,6 +1,11 @@
 from locust import HttpUser, TaskSet, task, between
 import random
 import json
+import logging
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
 
 
 class CacheBehaviour(TaskSet):
@@ -11,12 +16,31 @@ class CacheBehaviour(TaskSet):
                     {"key": "Interest", "value": "Dance"},
                     {"key": "Escape", "value": "World"}]
 
-        self.client.post("/data", json.dumps(random.choice(payloads)), headers)
+        try:
+            payload = random.choice(payloads)
+            response = self.client.post("/cache/data", json.dumps(payload), headers)
+            
+            if response.status_code == 200:
+                logger.info(f"PUT successful for key {payload['key']}")
+            else:
+                logger.error(f"PUT failed with status code {response.status_code}: {response.text}")
+        except Exception as e:
+            logger.error(f"Exception during PUT request: {str(e)}")
 
     @task
     def get(self):
-        self.client.get(
-            "/data/"+random.choice(["water", "Interest", "Escape"]))
+        try:
+            key = random.choice(["water", "Interest", "Escape"])
+            response = self.client.get("/cache/data/" + key)
+            
+            if response.status_code == 200:
+                logger.info(f"GET successful for key {key}")
+            elif response.status_code == 404:
+                logger.warning(f"GET key not found: {key}")
+            else:
+                logger.error(f"GET failed with status code {response.status_code}: {response.text}")
+        except Exception as e:
+            logger.error(f"Exception during GET request: {str(e)}")
 
 
 class CacheLoadTest(HttpUser):

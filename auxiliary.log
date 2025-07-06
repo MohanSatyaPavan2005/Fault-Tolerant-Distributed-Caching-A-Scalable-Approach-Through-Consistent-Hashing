@@ -1,0 +1,24 @@
+2025/05/10 16:04:32 main.go:1008: Starting auxiliary server...
+2025/05/10 16:04:32 main.go:161: Auxiliary Server Configuration:
+2025/05/10 16:04:32 main.go:162: - Port: 3001
+2025/05/10 16:04:32 main.go:163: - Master Address: master:8000
+2025/05/10 16:04:32 main.go:164: - Cache Size: 1000
+2025/05/10 16:04:32 main.go:165: - Backup Directory: /tmp/cache-backup
+2025/05/10 16:04:32 main.go:166: - Backup Interval: 10s
+2025/05/10 16:04:32 main.go:167: - Node ID: auxiliary-mmspavan-3001
+2025/05/10 16:04:32 main.go:168: - Server Timeouts: Read=30s, Write=30s, Idle=2m0s
+2025/05/10 16:04:32 main.go:789: No backup files found in /tmp/cache-backup
+2025/05/10 16:04:42 main.go:198: Warning: Failed to register with master server: failed to send registration request: Post "http://master:8000/nodes": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2025/05/10 16:04:42 main.go:723: Starting automatic backup process with interval of 10s
+2025/05/10 16:04:42 main.go:219: Auxiliary server starting on port 3001...
+2025/05/10 16:04:52 main.go:775: Created backup file: /tmp/cache-backup/backup-mmspavan-auto-1746893092259153786.json with 0 entries
+2025/05/10 16:04:52 main.go:734: Created automatic backup: backup-mmspavan-auto-1746893092259153786
+2025/05/10 16:05:02 main.go:775: Created backup file: /tmp/cache-backup/backup-mmspavan-auto-1746893102259331961.json with 0 entries
+2025/05/10 16:05:02 main.go:734: Created automatic backup: backup-mmspavan-auto-1746893102259331961
+2025/05/10 16:05:12 main.go:775: Created backup file: /tmp/cache-backup/backup-mmspavan-auto-1746893112253824072.json with 0 entries
+2025/05/10 16:05:12 main.go:734: Created automatic backup: backup-mmspavan-auto-1746893112253824072
+2025/05/10 16:05:14 main.go:234: Shutdown signal received
+2025/05/10 16:05:14 main.go:775: Created backup file: /tmp/cache-backup/backup-mmspavan-shutdown-1746893114662974762.json with 0 entries
+2025/05/10 16:05:14 main.go:244: Created shutdown backup: backup-mmspavan-shutdown-1746893114662974762
+2025/05/10 16:05:19 main.go:249: Warning: Failed to deregister from master: failed to send deregistration request: Delete "http://master:8000/nodes/auxiliary-mmspavan-3001": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+2025/05/10 16:05:19 main.go:253: Shutting down server...

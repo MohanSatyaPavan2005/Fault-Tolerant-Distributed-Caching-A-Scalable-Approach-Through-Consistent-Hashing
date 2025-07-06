@@ -1,136 +1,218 @@
-version: "3"
+version: '3.8'
 
 services:
-  master: 
-    build: 
-      context: "./master"
-    scale: 3
-    # ports:
-    #   - 8000:8000
-    depends_on:
-      - zoo
-      - aux1
-      - aux2
-      - aux3
-    environment:
-      - AUX_SERVERS=aux1:3001,aux2:3002,aux3:3003
-      - ZOO_SERVERS=zoo:2181
-      - PORT=8000
-    volumes:
-      - ./master:/app
-      - ./data:/data
-    networks:
-      - cache-network
-
   nginx:
-    image: "nginx"
-    depends_on:
-      - master
+    image: nginx:latest
     ports:
-      - 8080:3000
+      - "8081:80"
     volumes:
-      - ./nginx/conf.d:/etc/nginx/
+      - ./config/nginx/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - master-1
+      - master-2
+      - master-3
     networks:
-      - cache-network
-  
+      - cache-net
+
+  master-1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        SERVER_TYPE: master
+    environment:
+      - PORT=8000
+      - REPLICATION_FACTOR=10
+      - HEALTH_CHECK_INTERVAL=10
+      - BACKUP_INTERVAL=120
+    volumes:
+      - master-1-data:/app/data
+    networks:
+      - cache-net
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  master-2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        SERVER_TYPE: master
+    environment:
+      - PORT=8000
+      - REPLICATION_FACTOR=10
+      - HEALTH_CHECK_INTERVAL=10
+      - BACKUP_INTERVAL=120
+    volumes:
+      - master-2-data:/app/data
+    networks:
+      - cache-net
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  master-3:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        SERVER_TYPE: master
+    environment:
+      - PORT=8000
+      - REPLICATION_FACTOR=10
+      - HEALTH_CHECK_INTERVAL=10
+      - BACKUP_INTERVAL=120
+    volumes:
+      - master-3-data:/app/data
+    networks:
+      - cache-net
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
 
   aux1:
     build:
-      context: "./auxiliary"
-    restart: unless-stopped
+      context: .
+      dockerfile: Dockerfile
+      args:
+        SERVER_TYPE: auxiliary
     environment:
       - PORT=3001
-      - MASTER_SERVER=master:8000
-      - ID=aux1
-      - ZOO_SERVERS=zoo:2181
-    ports:
-      - 9001:3001
-    depends_on:
-      - zoo
+      - MASTER_ADDRESS=nginx:80
+      - CACHE_SIZE=1000
+      - BACKUP_DIR=/app/backup
+      - BACKUP_INTERVAL=60
     volumes:
-      - ./auxiliary:/app
-      - ./data:/data
+      - aux1-data:/app/backup
     networks:
-      - cache-network
- 
+      - cache-net
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
 
   aux2:
     build:
-      context: "./auxiliary"
-    restart: unless-stopped
+      context: .
+      dockerfile: Dockerfile
+      args:
+        SERVER_TYPE: auxiliary
     environment:
       - PORT=3002
-      - MASTER_SERVER=master:8000
-      - ID=aux2
-      - ZOO_SERVERS=zoo:2181
-    ports:
-      - 9002:3002
-    depends_on:
-      - zoo
+      - MASTER_ADDRESS=nginx:80
+      - CACHE_SIZE=1000
+      - BACKUP_DIR=/app/backup
+      - BACKUP_INTERVAL=60
     volumes:
-      - ./auxiliary:/app
-      - ./data:/data
+      - aux2-data:/app/backup
     networks:
-      - cache-network
-
+      - cache-net
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3002/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
 
   aux3:
     build:
-      context: "./auxiliary"
-    restart: unless-stopped
+      context: .
+      dockerfile: Dockerfile
+      args:
+        SERVER_TYPE: auxiliary
     environment:
       - PORT=3003
-      - MASTER_SERVER=master:8000
-      - ID=aux3
-      - ZOO_SERVERS=zoo:2181
-    ports:
-      - 9003:3003
-    depends_on:
-      - zoo
+      - MASTER_ADDRESS=nginx:80
+      - CACHE_SIZE=1000
+      - BACKUP_DIR=/app/backup
+      - BACKUP_INTERVAL=60
     volumes:
-      - ./auxiliary:/app
-      - ./data:/data
+      - aux3-data:/app/backup
     networks:
-      - cache-network
-
-# Cluster Management
-
-  zoo:
-    image: zookeeper
+      - cache-net
     restart: always
-    ports:
-      - 2181:2181
-      - 2888:2888
-      - 3888:3888
-    networks:
-      - cache-network
-    volumes:
-      - ./zookeeper/zoo.cfg:/conf/zoo.cfg
-      - ./data/zookeeper:/data
-    environment:
-      - ZOO_MY_ID=1
-      - ZOO_SERVERS=server.1=zoo:2888:3888;2181
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3003/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
 
-# Metrics
   prometheus:
-    image: prom/prometheus
+    image: prom/prometheus:latest
     ports:
-      - 9090:9090
+      - "9090:9090"
     volumes:
       - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus-data:/prometheus
+    restart: always
     networks:
-      - cache-network
+      - cache-net
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/usr/share/prometheus/console_libraries'
+      - '--web.console.templates=/usr/share/prometheus/consoles'
 
   grafana:
-    image: grafana/grafana
+    image: grafana/grafana:latest
     ports:
-      - 4000:3000
-    environment:
-      - GF_INSTALL_PLUGINS=grafana-piechart-panel
+      - "4000:3000"
     volumes:
-      - ./grafana:/var/lib/grafana
+      - ./config/grafana/dashboards:/etc/grafana/provisioning/dashboards
+      - ./config/grafana/datasources:/etc/grafana/provisioning/datasources
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_USERS_ALLOW_SIGN_UP=false
+      - GF_INSTALL_PLUGINS=grafana-piechart-panel
+    depends_on:
+      - prometheus
     networks:
-      - cache-network
+      - cache-net
+    restart: always
+
+  zookeeper:
+    image: bitnami/zookeeper:latest
+    hostname: zoo
+    container_name: zoo
+    environment:
+      - ALLOW_ANONYMOUS_LOGIN=yes
+    ports:
+      - "2181:2181"
+    networks:
+      - cache-net
+    healthcheck:
+      test: ["CMD", "zkServer.sh", "status"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
 
 networks:
-  cache-network:
+  cache-net:
+    driver: bridge
+
+volumes:
+  master-1-data:
+  master-2-data:
+  master-3-data:
+  aux1-data:
+  aux2-data:
+  aux3-data:
+  prometheus-data:

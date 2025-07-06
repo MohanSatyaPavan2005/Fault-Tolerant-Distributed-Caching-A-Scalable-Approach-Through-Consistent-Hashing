@@ -1,0 +1,19 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+  scrape_timeout: 10s
+
+scrape_configs:
+  - job_name: 'master'
+    metrics_path: '/metrics'
+    static_configs:
+      - targets: ['master-1:8000', 'master-2:8000', 'master-3:8000']
+        labels:
+          group: 'master'
+
+  - job_name: 'auxiliary'
+    metrics_path: '/metrics'
+    static_configs:
+      - targets: ['aux1:3001', 'aux2:3002', 'aux3:3003']
+        labels:
+          group: 'auxiliary'

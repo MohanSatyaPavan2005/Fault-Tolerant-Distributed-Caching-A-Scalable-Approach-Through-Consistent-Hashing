@@ -1,22 +1,94 @@
 global:
-  scrape_interval: "10s"
-  scrape_timeout: "10s"
-  evaluation_interval: "10s"
+  scrape_interval: 15s     # Set the default scrape interval to 15 seconds
+  evaluation_interval: 15s  # Evaluate rules every 15 seconds
+  # Added some useful defaults
+  scrape_timeout: 10s      # Timeout after 10 seconds
+  external_labels:
+    monitor: 'distributed-cache-system'  # Label added to all metrics for external systems
 
+# A scrape configuration for running containers
 scrape_configs:
-  - job_name: "master"
+  # Production Docker containers
+  - job_name: 'master_servers'
+    metrics_path: '/metrics'
+    scrape_interval: 10s
     static_configs:
-      - targets:
-          - "master:8000"
-  - job_name: "aux1"
+      - targets: ['master-1:8000', 'master-2:8000', 'master-3:8000']
+        labels:
+          service: 'cache-master'
+          environment: 'production'
+    relabel_configs:
+      - source_labels: [__address__]
+        regex: '(.*):.*'
+        target_label: instance
+        replacement: '${1}'
+
+  - job_name: 'auxiliary_servers'
+    metrics_path: '/metrics'
+    scrape_interval: 10s
     static_configs:
-      - targets:
-        - "aux1:3001"
-  - job_name: "aux2"
+      - targets: ['aux1:3001', 'aux2:3002', 'aux3:3003']
+        labels:
+          service: 'cache-auxiliary'
+          environment: 'production'
+    relabel_configs:
+      - source_labels: [__address__]
+        regex: '(.*):.*'
+        target_label: instance
+        replacement: '${1}'
+
+  - job_name: 'node_exporter'
+    scrape_interval: 15s
     static_configs:
-      - targets:
-        - "aux2:3002"
-  - job_name: "aux3"
+      - targets: ['localhost:9100']
+        labels:
+          service: 'node-metrics'
+          environment: 'production'
+
+  # Local development scrape configs - using localhost for host access
+  - job_name: 'local_development_master'
+    metrics_path: '/metrics'
+    scrape_interval: 5s  # More frequent scraping for development
     static_configs:
-      - targets:
-        - "aux3:3003"
+      - targets: ['localhost:8001']  # Direct localhost access with host networking
+        labels:
+          service: 'cache-master'
+          environment: 'development'
+          instance: 'local-dev'
+          mode: 'testing'
+
+  - job_name: 'local_development_auxiliary'
+    metrics_path: '/metrics'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['localhost:3001', 'localhost:3002', 'localhost:3003']
+        labels:
+          service: 'cache-auxiliary'
+          environment: 'development'
+
+  # Prometheus self-monitoring
+  - job_name: 'prometheus'
+    scrape_interval: 10s
+    static_configs:
+      - targets: ['localhost:9090']
+        labels:
+          service: 'monitoring'
+
+# Example alert rules - uncomment and customize as needed
+# rule_files:
+#   - "alert_rules.yml"
+
+# Example alerting configuration - uncomment and customize as needed
+# alerting:
+#   alertmanagers:
+#     - static_configs:
+#         - targets:
+#           - 'alertmanager:9093'
+
+# Alert rules can be configured here
+# alerting:
+#   alertmanagers:
+#     - static_configs:
+#         - targets:
+#           - alertmanager:9093
+

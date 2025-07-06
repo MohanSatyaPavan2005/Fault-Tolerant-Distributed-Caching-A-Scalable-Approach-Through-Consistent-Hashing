@@ -1,0 +1,18 @@
+2025/05/11 06:31:45 Starting metrics collection
+2025/05/11 06:31:45 Set server info: type=master
+2025/05/11 06:31:45 =========================================
+2025/05/11 06:31:45 Starting server with Prometheus metrics
+2025/05/11 06:31:45 =========================================
+2025/05/11 06:31:45 Metrics handler registered at /metrics
+2025/05/11 06:31:45 Server configured with dedicated /metrics endpoint for Prometheus metrics
+2025/05/11 06:31:45 Routes registered:
+2025/05/11 06:31:45   - /metrics (Prometheus metrics)
+2025/05/11 06:31:45   - / (Root endpoint)
+2025/05/11 06:31:45   - /cache/ (Cache operations)
+2025/05/11 06:31:45   - /health (Health check)
+2025/05/11 06:31:45   - /test-metrics (Test endpoint)
+2025/05/11 06:31:45 Using port 8000 from environment
+Master server starting on port 8000...
+2025/05/11 06:31:45 Listening on :8000
+Server failed: listen tcp :8000: bind: address already in use
+exit status 1
