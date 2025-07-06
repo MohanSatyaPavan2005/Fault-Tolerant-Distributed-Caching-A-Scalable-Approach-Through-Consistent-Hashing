@@ -4,13 +4,11 @@
 [![Go Version](https://img.shields.io/badge/Go-1.21+-blue.svg)](https://golang.org)
 [![Docker](https://img.shields.io/badge/Docker-Compose-blue.svg)](https://docker.com)
 
-A high-performance, fault-tolerant distributed caching system implemented in Go, featuring consistent hashing for optimal data distribution, comprehensive monitoring, and automatic failure recovery mechanisms.
+A high-performance, fault-tolerant distributed caching system implemented in Go, featuring consistent hashing for optimal data distribution, comprehensive monitoring, and automatic failure recovery mechanisms. Requiring no manual management, it achieves up to 95% cache hits, 1322 req/s throughput, and 40 ms response time under 80% resource use.
+
+An autonomous Distributed Cache System with consistent hashing and LRU eviction, using Dockerized nginx load balancers and Prometheus-Grafana monitoring.
 
 ![Architecture of Distributed Cache System](distributed-cache.png)
-
-## 🚀 Features
-
-### Core Functionality
 - **🔄 Consistent Hashing**: Intelligent data distribution across nodes with minimal rebalancing
 - **⚡ High Performance**: Optimized for low-latency cache operations
 - **🛡️ Fault Tolerance**: Automatic failure detection and recovery
@@ -380,3 +378,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 ⭐ **Star this repository if you find it helpful!**
+=======
+# Fault-Tolerant-Distributed-Caching-A-Scalable-Approach-Through-Consistent-Hashing
+An autonomous Distributed Cache System with consistent hashing and LRU eviction, requiring no manual management. Using Dockerized nginx load balancers and Prometheus-Grafana monitoring, it achieves up to 95% cache hits, 1322 req/s throughput, and 40 ms response time under 80% resource use.
+>>>>>>> b9c0ec86c6978f3c52ed47b48ae9427707b08252
